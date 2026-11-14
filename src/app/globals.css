@@ -1,0 +1,199 @@
+@import "tailwindcss";
+@import "react-datepicker/dist/react-datepicker.css";
+
+@theme {
+  /* Farver */
+  --color-primary: #646d55;
+  --color-secondary: #f5f3ed;
+  --color-tertiary: #bcc1ae;
+  --color-surface: #eae6db;
+  --color-cta: #de774d;
+  --color-ctaLight: #ebad94;
+  --color-cta-dark: #b25f3e;
+  --color-error: #e57373;
+
+  /* Typografi */
+  --font-primary: "Skeena", sans-serif;
+  --text-display: 2.5rem;
+  --text-heading: 1.75rem;
+  --text-title: 1.5rem;
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  --text-tiny: 0.75rem;
+  --text-logo: 1.25rem;
+
+  /* Linjeafstand */
+  --text-display--line-height: 3.3125rem;
+  --text-heading--line-height: 2.625rem;
+  --text-title--line-height: 2rem;
+  --text-body--line-height: 1.6rem;
+  --text-small--line-height: 1.25rem;
+  --text-tiny--line-height: 1rem;
+  --text-logo--line-height: 0.8rem;
+
+  /* Spacing */
+  --spacing-s: 0.5rem;
+  --spacing-m: 0.2rem;
+  --spacing-l: 0.3rem;
+  --spacing-xl: 0.4rem;
+  --spacing-mobile: 2rem;
+  --spacing-laptop: 2rem;
+  --spacing-desktop-m: 3rem;
+  --spacing-desktop: 7.5rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --text-display: 1.8rem;
+    --text-display--line-height: 2.2rem;
+
+    --text-heading: 1.4rem;
+    --text-heading--line-height: 2.125rem;
+
+    --text-title: 1.25rem;
+    --text-title--line-height: 1.75rem;
+
+    --text-body: 0.95rem;
+    --text-body--line-height: 1.5rem;
+
+    --text-small: 0.8rem;
+    --text-small--line-height: 1.25rem;
+
+    --text-tiny: 0.7rem;
+    --text-tiny--line-height: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --text-display: 1.6rem;
+    --text-heading: 1.2rem;
+    --text-body: 0.8rem;
+  }
+}
+@media (max-width: 1023px) {
+  :root {
+    --text-display: 1.8rem;
+
+    --text-heading: 1.4rem;
+    --text-body: 0.9rem;
+  }
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-display);
+    line-height: var(--text-display--line-height);
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  h2 {
+    font-size: var(--text-heading);
+    line-height: var(--text-heading--line-height);
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-l);
+  }
+
+  h3 {
+    font-size: var(--text-title);
+    line-height: var(--text-title--line-height);
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-m);
+  }
+
+  p {
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-s);
+  }
+
+  small {
+    font-size: var(--text-small);
+    line-height: var(--text-small--line-height);
+  }
+
+  h1 + p {
+    margin-top: var(--spacing-xl);
+  }
+
+  h2 + p {
+    margin-top: var(--spacing-l);
+  }
+
+  h3 + p {
+    margin-top: var(--spacing-m);
+  }
+}
+
+.react-datepicker {
+  background-color: #eae6db !important;
+  border: none !important;
+  padding: 0px !important;
+  font-family: "Skeena", sans-serif !important;
+  width: 100% !important;
+}
+
+.react-datepicker__month-container {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.react-datepicker__month {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.react-datepicker__header {
+  text-align: start !important;
+  background-color: #eae6db !important;
+  border-bottom: none !important;
+}
+
+.react-datepicker__week {
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.react-datepicker__current-month {
+  color: #646d55 !important;
+  font-weight: bold !important;
+  font-size: 1.25rem !important;
+}
+
+.react-datepicker__day-names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  margin: 0 6px 0 6px !important;
+  font-weight: 800 !important;
+}
+
+.react-datepicker__day-name {
+  color: #646d55 !important;
+}
+
+.react-datepicker__day {
+  width: 2.5rem !important;
+  color: #646d55 !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #bcc1ae !important;
+  color: white !important;
+}
+
+.react-datepicker__navigation--next {
+  top: 20px !important;
+}
+
+.react-datepicker__navigation--previous {
+  top: 20px !important;
+  left: 200px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
